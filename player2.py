@@ -9,7 +9,7 @@ headers = { 'User-Agent' : user_agent }
 try:
 	request = urllib2.Request(url,None,headers)
 	response = urllib2.urlopen(request)
-#	print response.read()
+	print response.read()
 	content = response.read().decode('utf-8')
 	pattern_g = re.compile('<td class ="normal .*? change_color col.*? row.*?>(.*?)</td>',re.S)
 	items = re.findall(pattern_g,content)

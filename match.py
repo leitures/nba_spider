@@ -1,12 +1,16 @@
 # -*- coding: utf-8 -*-
 import urllib2
 import urllib
+import os
 from bs4 import BeautifulSoup
 
 #get html files
 user_agent = 'Mozilla/4.0 (compatible; MSIE 5.5; Windows NT)'
-url = 'http://www.stat-nba.com/game/37439.html'
 headers = { 'User-Agent' : user_agent }
+
+class
+page = 37439
+url = 'http://www.stat-nba.com/game/' + str(page)+'.html'
 request = urllib2.Request(url,None,headers) 
 response = urllib2.urlopen(request)
 page = response.read()
